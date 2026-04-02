@@ -1,8 +1,4 @@
-# instagramclone
-
-# Create README.md file with the provided content
-
-content = """# 📸 Instagram Clone
+# 📸 Instagram Clone
 
 A simple and responsive **Instagram UI Clone** built using **HTML, CSS, and JavaScript**.  
 This project replicates the core layout and design of Instagram, including posts, stories, and user interface elements.
@@ -117,10 +113,3 @@ If you like this project:
 
 Give it a ⭐ on GitHub  
 Share with your friends  
-"""
-
-file_path = "/mnt/data/README.md"
-with open(file_path, "w") as f:
-    f.write(content)
-
-file_path
