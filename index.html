@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+          href="style.css">
+    <title>Instagram Clone</title>
+</head>
+<body>
+  <!-- Our Header section Starts from here -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                      <img src=
+"data:image/jpeg;base64,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" 
+                        alt="img1" height="30px">
+                    </a>
+                </div>
+                <div class="searchbar">
+                    <input type="text" 
+                           placeholder="Search">
+                    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093658/search-200x200.png"
+                         height="18"
+                         alt="img2">
+                </div>
+                <div class="nav-links">
+                    <ul class="nav-group">
+                        <li class="nav-item">
+                            <a href="#">
+                                <i class="fas fa-home"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                                <i class="fab fa-facebook-messenger"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                                <i class="far fa-compass"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="">
+                                <i class="far fa-heart"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="action">
+                                <div class="profile" 
+                                     onclick="menuToggle()">
+                                    <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg" 
+                                        alt="user Avatar">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Code for Showing the Status -->
+    <main>
+        <div class="container">
+            <div class="col-9">
+                <div class="statuses">
+                    <div class="status">
+                        <div class="image">
+                            <img src=
+"https://w7.pngwing.com/pngs/168/827/png-transparent-computer-icons-user-profile-avatar-profile-woman-desktop-wallpaper-silhouette-thumbnail.png"
+                                 alt="img3">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg" 
+                                 alt="img4">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093241/g3-200x200.png" 
+                                 alt="img5">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093229/g-200x200.png" 
+                                 alt="img6">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg" 
+                                 alt="img7">
+                        </div>
+                    </div>
+                    <div class="status">
+                        <div class="image">
+                            <img src=
+"https://www.pngmart.com/files/21/Admin-Profile-Vector-PNG-Photos.png" 
+                                 alt="img8">
+                        </div>
+                    </div>
+                </div>
+              
+              <!-- Code for viewing the Post -->
+                <div class="card">
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093229/g-200x200.png" 
+                                            alt="img8">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Ayush Agarwal
+                                  <br>
+                                  <span>Mumbai, India</span>
+                          </h3>
+                        </div>
+                        <div>
+                            <span class="dot">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="imgBx">
+                        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609090112/gfg1-298x300.jpeg" 
+                            alt="post-1" class="cover">
+                    </div>
+                    <div class="bottom">
+                        <div class="actionBtns">
+                            <div class="left">
+                                <span class="heart" 
+                                      onclick="addlike()">
+                                    <span>
+                                        <svg aria-label="Like" 
+                                             color="#262626" 
+                                             fill="#262626" 
+                                             height="24" 
+                                             role="img"
+                                             viewBox="0 0 48 48" 
+                                             width="24">
+                                            <!-- Coordinate path  -->
+
+                                            <path
+                                                d="M34.6 6.1c5.7 0 10.4 5.2 10.4 
+                                                11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 
+                                                41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 
+                                                11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 
+                                                1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 
+                                                1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 
+                                                1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 
+                                                0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 
+                                                1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 
+                                                1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 
+                                                7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 
+                                                48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <svg aria-label="Comment" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                  
+                              <!-- Coordinate path  -->
+                                    <path clip-rule="evenodd"
+                                        d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 
+                                        11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 
+                                        7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 
+                                        4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 
+                                        8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 
+                                        2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 
+                                        44.5 12.7 44.5 24z"
+                                        fill-rule="evenodd">
+                                  </path>
+                                </svg>
+                                <svg aria-label="Share Post" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img"
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                    <path
+                                        d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 
+                                        3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 
+                                        1 1.2 1.1h.2c.5 0 1-.3 
+                                        1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 
+                                        6.1h35.5L18 18.7 5.2 6.1zm18.7 
+                                        33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="right">
+                                <svg aria-label="Save" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                  <!-- Coordinate path  -->
+                                    <path
+                                        d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                                        47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                                        3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                                        1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 
+                                        0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                                        1.4-.9 2.2-.9z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <p class="likes">203 likes</p>
+
+                        </a>
+                        <a href="#">
+                            <p class="message">
+                              <b>Raju Modi</b>
+                            </p>
+
+                        </a>
+                        <a href="#">
+                            <h4 class="comments">View all 32 comments</h4>
+                        </a>
+                        <a href="#">
+                            <h5 class="postTime">2 hours ago</h5>
+                        </a>
+                        <div class="addComments">
+                            <div class="reaction">
+                                <h3>
+                                  <i class="far fa-smile"></i>
+                                </h3>
+                            </div>
+                            <input type="text"
+                                   class="text"
+                                   placeholder="Add a comment...">
+                            <a href="#">Post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src=
+"https://static.vecteezy.com/system/resources/thumbnails/012/793/465/small/children-comic-colorful-happines-word-with-random-details-perfect-for-tags-and-stickers-png.png" 
+                                            alt="img9">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Piyush Agarwal<br>
+                              <span>Delhi, India</span>
+                             </h3>
+                        </div>
+                        <div>
+                            <span class="dot">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="imgBx">
+                        <img src=
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0oLx42JWNlc-n1WJfjTgXP2tqwFrFBqSPIQ&s" 
+                            alt="post-1" class="cover">
+                    </div>
+                    <div class="bottom">
+                        <div class="actionBtns">
+                            <div class="left">
+                                <span class="heart" 
+                                      onclick="addlike()">
+                                    <span>
+                                        <svg aria-label="Like" 
+                                             color="#262626" 
+                                             fill="#262626" 
+                                             height="24" 
+                                             role="img"
+                                             viewBox="0 0 48 48" 
+                                             width="24">
+                                  <!-- Coordinate path  -->
+                                            <path
+                                                d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 
+                                                0 6.8-5.9 11-11.5 16S25 41.3 24 
+                                                41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 
+                                                11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 
+                                                4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 
+                                                2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 
+                                                0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 
+                                                3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 
+                                                16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 
+                                                6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 
+                                                1.1-.2 1.6-.5 1-.6 2.8-2.2 
+                                                7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 
+                                                29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <svg aria-label="Comment" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                    <path clip-rule="evenodd"
+                               <!-- Coordinate path  -->
+                                        d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 
+                                        2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 
+                                        47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 
+                                        1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 
+                                        1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 
+                                        1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 
+                                        3.5 24 3.5 44.5 12.7 44.5 24z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                                <svg aria-label="Share Post" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                    <path
+                                        d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 
+                                        3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 
+                                        1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 
+                                        6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 
+                                        8.6 23.9 39.7z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="right">
+                                <svg aria-label="Save"
+                                     class="_8-yf5 " 
+                                     color="#262626"
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                            <!-- Coordinate path  -->
+
+                                    <path
+                                        d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                                        47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                                        3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                                        1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 
+                                        2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                      <!-- Adding number of like and name of people  -->
+                        <a href="#">
+                            <p class="likes">119 likes</p>
+                        </a>
+                        <a href="#">
+                            <p class="message">
+                              <b>Piyush Agarwal</b>
+                            </p>
+                        </a>
+                        <a href="#">
+                            <h4 class="comments">View all 20 comments</h4>
+                        </a>
+                        <a href="#">
+                            <h5 class="postTime">4 hours ago</h5>
+                        </a>
+                        <div class="addComments">
+                            <div class="reaction">
+                                <h3><i class="far fa-smile"></i></h3>
+                            </div>
+                            <input type="text" 
+                                   class="text" 
+                                   placeholder="Add a comment...">
+                            <a href="#">Post</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src="./assets/images/user-3.jpeg" 
+                                            alt="img10">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Keshav Agarwal<br>
+                              <span>Kolkata, India</span>
+                            </h3>
+                        </div>
+                        <div>
+                            <span class="dot">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="imgBx">
+                        <img src=
+"https://e7.pngegg.com/pngimages/528/86/png-clipart-euclidean-rural-area-natural-scenery-landscape-natural-thumbnail.png" 
+                            alt="post-1" 
+                            class="cover">
+                    </div>
+                    <div class="bottom">
+                        <div class="actionBtns">
+                            <div class="left">
+                                <span class="heart" 
+                                      onclick="addlike()">
+                                    <span>
+                                        <svg aria-label="Like" 
+                                             color="#262626" 
+                                             fill="#262626" 
+                                             height="24" 
+                                             role="img"
+                                             viewBox="0 0 48 48"
+                                             width="24">
+                                            <path
+                                                d="M34.6 6.1c5.7 0 10.4 5.2 10.4 
+                                                11.5 0 6.8-5.9 11-11.5 16S25 41.3 
+                                                24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 
+                                                11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 
+                                                4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 
+                                                2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 
+                                                0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 
+                                                3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 
+                                                1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 
+                                                6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 
+                                                2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 
+                                                29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </span>
+                                <svg aria-label="Comment" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                    <path clip-rule="evenodd"
+                                        d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 
+                                        2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 
+                                        47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 
+                                        1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 
+                                        1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 
+                                        1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 
+                                        3.5 24 3.5 44.5 12.7 44.5 24z"
+                                        fill-rule="evenodd">
+                                  </path>
+                                </svg>
+                                <svg aria-label="Share Post"
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                    <path
+                                        d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 
+                                        3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 
+                                        22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 
+                                        1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 
+                                        6.1h35.5L18 18.7 5.2 6.1zm18.7 
+                                        33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="right">
+                                <svg aria-label="Save" 
+                                     class="_8-yf5 " 
+                                     color="#262626" 
+                                     fill="#262626" 
+                                     height="24"
+                                     role="img" 
+                                     viewBox="0 0 48 48" 
+                                     width="24">
+                                    <path
+                                        d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 
+                                        47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 
+                                        3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 
+                                        1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 
+                                        1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 
+                                        1.4-.9 2.2-.9z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <p class="likes">184 likes</p>
+                        </a>
+                        <a href="#">
+                            <p class="message">
+                              <b>Mayank</b> Nature 
+                                <span>#love</span>
+                                <span>#2021</span>
+                            </p>
+                        </a>
+                        <a href="#">
+                            <h4 class="comments">View all 25 comments</h4>
+                        </a>
+                        <a href="#">
+                            <h5 class="postTime">9 hours ago</h5>
+                        </a>
+                        <div class="addComments">
+                            <div class="reaction">
+                                <h3>
+                                  <i class="far fa-smile"></i>
+                               </h3>
+                            </div>
+                            <input type="text"
+                                   class="text" 
+                                   placeholder="Add a comment...">
+                            <a href="#">Post</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <h4>Suggestions For You</h4>
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg" 
+                                            alt="img12">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Aditya Verma<br>
+                              <span>Follows You</span>
+                            </h3>
+                        </div>
+                        <div>
+                            <a href="#" 
+                               class="follow">follow
+                             </a>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093229/g-200x200.png" 
+                                            alt="img13">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Amit Singh<br>
+                              <span>Follows You</span>
+                           </h3>
+                        </div>
+                        <div>
+                            <a href="#" 
+                               class="follow">follow
+                           </a>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg" 
+                                            alt="img14">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Piyush Agarwal<br>
+                                <span>Followed by Keshav Agarwal</span>
+                            </h3>
+                        </div>
+                        <div>
+                            <a href="#" 
+                               class="follow">follow</a>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093229/g-200x200.png" 
+                                            alt="img15">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Amit Sharma<br>
+                              <span>Follows You</span>
+                            </h3>
+                        </div>
+                        <div>
+                            <a href="#" 
+                               class="follow">follow
+                           </a>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="userDetails">
+                            <div class="profilepic">
+                                <div class="profile_img">
+                                    <div class="image">
+                                        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20220609093241/g3-200x200.png" 
+                                            alt="img16" 
+                                            class="cover">
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Raj Goel<br>
+                                <span>Followed by Keshav Agarwal</span>
+                            </h3>
+                        </div>
+                        <div>
+                            <a href="#" 
+                               class="follow">follow
+                            </a>
+                        </div>
+                    </div>
+                </div>
+             <!-- Our Footer Section will start from Here -->
+                <div class="footer">
+                    <a class="footer-section" href="#">About</a>
+                    <a class="footer-section" href="#">Help</a>
+                    <a class="footer-section" href="#">API</a>
+                    <a class="footer-section" href="#">Jobs</a>
+                    <a class="footer-section" href="#">Privacy</a>
+                    <a class="footer-section" href="#">Terms</a>
+                    <a class="footer-section" href="#">Locations</a>
+                    <br>
+                    <a class="footer-section" href="#">Top Accounts</a>
+                    <a class="footer-section" href="#">Hashtag</a>
+                    <a class="footer-section" href="#">Language</a>
+                    <br><br>
+                    <span class="footer-section">
+                        &copy; 2023 INSTAGRAM FROM FACEBOOK
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
